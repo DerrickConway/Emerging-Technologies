@@ -48,7 +48,6 @@ def parse_images(images_path):
         return images
 
 print()
-
 trainImages = parse_images('train-images-idx3-ubyte.gz')
 testImages = parse_images('t10k-images-idx3-ubyte.gz')
 
@@ -69,7 +68,6 @@ def parse_labels( labels_path):
 
         return labels
 print()
-
 
 translabels = parse_labels('train-labels-idx1-ubyte.gz')
 testlabels = parse_labels('t10k-labels-idx1-ubyte.gz')
