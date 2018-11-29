@@ -5,13 +5,18 @@ import numpy as np
 #self.name = name
 
 
+#class MnistDataSet:
+def __init__(self, name, image_Path, lable_path):
+    self.name = name
 
+    self.parse_images(image_Path)
+    self.parse_labels(lable_path)
 
-def parse_images(images_path):
-    
+def parse_images(self,images_path):
+            
     with gzip.open(images_path, 'rb') as file:
-
         magic = int.from_bytes(file.read(4), 'big')
+        #magic = int.from_bytes(file.read(4), 'big')
         print(" Magic number: " + str(magic))
 
 
@@ -26,9 +31,9 @@ def parse_images(images_path):
         columns = int.from_bytes(file.read(4), 'big')
         print("Number of Columns: " + str(columns))
 
-      #  buffer = file.read(rows * columns * number_of_Images)
-     #   data = np.frombuffer(buffer, dtype=np.uint8)
-    #    self.images = data.reshape(number_of_Images, rows, columns)
+        buffer = file.read(rows * columns * number_of_Images)
+        data = np.frombuffer(buffer, dtype=np.uint8)
+        self.images = data.reshape(number_of_Images, rows, columns)
 
 
 def parse_labels(labels_path):
