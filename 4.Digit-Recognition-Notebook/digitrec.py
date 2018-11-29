@@ -76,8 +76,9 @@ testlabels = parse_labels('t10k-labels-idx1-ubyte.gz')
 print("print image  ")
 
 image = Image.fromarray(np.array(trainImages[4444]))
-image = image.conwert('RGB')
+image = image.convert('RGB')
 image.show()
+
 
 
       #  buffer = file.read(number_of_labels)
