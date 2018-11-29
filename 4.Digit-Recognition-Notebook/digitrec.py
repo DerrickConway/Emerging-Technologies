@@ -38,23 +38,24 @@ def parse_images(images_path):
 
         images = []
         for i in range(number_of_Images):
-            rows = []
+            rowss = []
             for r in range(rows):
-                columns = []
+                columnss = []
                 for c in range(columns):
-                    columns.append(int.from_bytes(file.read(1), 'big'))
-                rows.append(columns)
-            images.append(rows)
+                    columnss.append(int.from_bytes(file.read(1), 'big'))
+                rowss.append(columnss)
+            images.append(rowss)
         return images
 
 print()
+
 trainImages = parse_images('train-images-idx3-ubyte.gz')
 testImages = parse_images('t10k-images-idx3-ubyte.gz')
 
 
 
 
-def parse_labels( labels_path):
+def parse_labels(labels_path):
     with gzip.open(labels_path, 'rb') as file:
 
         magic = int.from_bytes(file.read(4), 'big')
@@ -72,7 +73,12 @@ print()
 translabels = parse_labels('train-labels-idx1-ubyte.gz')
 testlabels = parse_labels('t10k-labels-idx1-ubyte.gz')
 
-    
+print("print image  ")
+
+image = Image.fromarray(np.array(trainImages[4444]))
+image = image.conwert('RGB')
+image.show()
+
 
       #  buffer = file.read(number_of_labels)
        # self.labels = np.frombuffer(buffer, astype (np.unit8))
