@@ -78,6 +78,8 @@ print("print image  ")
 image = Image.fromarray(np.array(trainImages[4444]))
 image = image.convert('RGB')
 image.show()
+image.save('train-4444-0.png')
+
 
 
 
