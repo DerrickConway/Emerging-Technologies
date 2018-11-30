@@ -84,10 +84,15 @@ and run the following command.
 It will open a tab in chrome and have a folder should appear click into it, when in it click on kernel 
 and restart and run. you will be able to run the notebook.
 
-Do the same for '2. Iris-Dataset-Notebook' and '3.MNIST-Dataset-Notebook1'
+Do the same for '2. Iris-Dataset-Notebook' and '3. MNIST-Dataset-Notebook1'
 
 To run the python scripy navigate to the folder '4.Digit-Rocognition-Script' and run the following command
 
 > python digitrec.py
 
-it will run the script and display the image and save to the folder.
+It will run the script and display the image and save to the folder.
+
+To run the Digit notebook script navigate to the folder, once in the directory folder cd into the first notebook named '5.Digit-Recognition-Notebook' and run the following command.
+
+> jupyter notebook
+
