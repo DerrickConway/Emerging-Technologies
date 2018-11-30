@@ -76,15 +76,15 @@ testlabels = parse_labels('t10k-labels-idx1-ubyte.gz')
 
 print("print image  ")
 
-image = Image.fromarray(np.array(trainImages[750]))
+image = Image.fromarray(np.array(trainImages[4444]))
 image = image.convert('RGB')
 image.show()
-image.save('train-750-0.png')
+image.save('train-4444-0.png')
 
-#image = Image.fromarray(np.array(trainImages[5555]))
-#image = image.convert('RGB')
-#image.show()
-#image.save('train-5555-0.png')
+image = Image.fromarray(np.array(trainImages[5555]))
+image = image.convert('RGB')
+image.show()
+image.save('train-5555-0.png')
 
 
 
