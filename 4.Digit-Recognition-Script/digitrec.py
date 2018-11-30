@@ -22,15 +22,15 @@ def parse_images(images_path):
 
 
         number_of_Images = int.from_bytes(file.read(4), 'big')
-        print("Number of Images: " + str(number_of_Images))
+        print(" Number of Images: " + str(number_of_Images))
 
 
         rows = int.from_bytes(file.read(4), 'big')
-        print("Number of rows; " + str(rows))
+        print(" Number of rows; " + str(rows))
 
 
         columns = int.from_bytes(file.read(4), 'big')
-        print("Number of Columns: " + str(columns))
+        print(" Number of Columns: " + str(columns))
 
        # buffer = file.read(rows * columns * number_of_Images)
        # data = np.frombuffer(buffer, dtype=np.uint8)
@@ -59,15 +59,16 @@ def parse_labels(labels_path):
     with gzip.open(labels_path, 'rb') as file:
 
         magic = int.from_bytes(file.read(4), 'big')
-        print("Magic number: " + str(magic))
+        print(" Magic number: " + str(magic))
 
         number_of_labels = int.from_bytes(file.read(4), 'big')
-        print("Number of labels: " + str(number_of_labels))
+        print(" Number of labels: " + str(number_of_labels))
 
         labels =[file.read(1) for i in range(number_of_labels)]
         labels = [int.from_bytes(label, 'big') for label in labels]
 
         return labels
+
 print()
 
 translabels = parse_labels('train-labels-idx1-ubyte.gz')
@@ -75,10 +76,15 @@ testlabels = parse_labels('t10k-labels-idx1-ubyte.gz')
 
 print("print image  ")
 
-image = Image.fromarray(np.array(trainImages[4444]))
+image = Image.fromarray(np.array(trainImages[750]))
 image = image.convert('RGB')
 image.show()
-image.save('train-4444-0.png')
+image.save('train-750-0.png')
+
+#image = Image.fromarray(np.array(trainImages[5555]))
+#image = image.convert('RGB')
+#image.show()
+#image.save('train-5555-0.png')
 
 
 
