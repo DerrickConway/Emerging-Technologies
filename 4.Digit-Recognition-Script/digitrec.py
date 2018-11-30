@@ -15,10 +15,6 @@ import numpy as np
 #read gzip files
 
 #self.name = name
-
-
-#class MnistDataSet:
-#def __init__(self, name, image_Path, lable_path):
    # self.name = name
 
     #self.parse_images(image_Path)
@@ -116,11 +112,3 @@ image.save('train-434-9.png') # save image in png file
 #image.save('train-545-8.png') # save image in png file
 
 
-
-
-      #  buffer = file.read(number_of_labels)
-       # self.labels = np.frombuffer(buffer, astype (np.unit8))
-
-   # images = []
-
-        #print()
