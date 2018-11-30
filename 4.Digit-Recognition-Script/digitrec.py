@@ -1,9 +1,16 @@
+# Author: Derrick Conway
+# Date: 30/11/2018
+# referenc:
+
+# https://stackoverflow.com/questions/12902540/read-from-a-gzip-file-in-python
+# https://www.youtube.com/watch?v=oYndcjlzwX8
+# https://www.youtube.com/watch?v=aZsZrkIgan0&t=153s
+# https://www.youtube.com/watch?v=ARODjRbGbSg
+
+
 import gzip
 from PIL import Image
 import numpy as np
-
-
-#download the image and lade files, have python decompress them byte by byte in order
 
 #read gzip files
 
@@ -98,15 +105,15 @@ print("print image  ")
 # step 3
 # output image
 
-image = Image.fromarray(np.array(trainImages[4444])) # python decompress and read it byte by byte into a data structures
+image = Image.fromarray(np.array(trainImages[434])) # python decompress and read it byte by byte into a data structures
 image = image.convert('RGB')
 image.show() # show image
-image.save('train-4444-0.png') # save image in png file
+image.save('train-434-9.png') # save image in png file
 
-image = Image.fromarray(np.array(trainImages[5555])) # python decompress and read it byte by byte into a data structures
-image = image.convert('RGB')
-image.show() # show image
-image.save('train-5555-0.png') # save image in png file
+#image = Image.fromarray(np.array(trainImages[545])) # python decompress and read it byte by byte into a data structures
+#image = image.convert('RGB')
+#image.show() # show image
+#image.save('train-545-8.png') # save image in png file
 
 
 
